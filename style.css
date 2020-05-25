@@ -1,0 +1,158 @@
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+}
+
+nav{
+    text-align: center;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #000;
+}
+
+nav > ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/**************/
+
+nav ul li{
+    background: #54366d;
+    width: 100%;
+    display: block;
+    position: relative;
+    padding: 15px 0;
+    transition: all 1s ease;
+}
+
+nav ul li a{
+    color: #fff;
+}
+
+nav ul li ul{
+    display: none;
+}
+
+nav ul li:hover ul{
+    display: block;
+    position: absolute;
+    top: 49px;
+    width: inherit;
+}
+
+nav ul li:hover{
+    background: #f9f9f9;
+}
+
+nav ul li:hover a{
+    color: #54366d;
+}
+
+nav ul li:hover ul li{
+    background: #54366d;
+}
+
+nav ul li:hover ul li a{
+    color: #fff;
+}
+
+nav li ul li{
+    text-align: left;
+    padding-left: 20px;
+    transition: all 1s ease;
+}
+
+nav li ul li:hover{
+    padding-left: 40px;
+}
+
+nav i{
+    padding-right: 8px;
+}
+
+/******* banner ********/
+
+header{
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 1)), url("banner.jpg") center/cover no-repeat;
+    min-height: 100vh;
+}
+
+/*********************/
+
+img{
+    width: 100%;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin: 100px 20px 10px 20px;
+}
+
+.container article{
+    background: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.container article h2{
+    padding: 10px 0;
+    color: #edaf02;
+}
+
+.container article .content{
+    padding: 20px;
+}
+
+.container article .content p{
+    opacity: 0.6;
+    font-weight: 300;
+}
+
+.container article:hover{
+    box-shadow: 0 13px 6px -1px rgba(0, 0, 0, 0.75);
+}
+
+/*** banner container ***/
+
+
+/*** media queries ***/
+
+@media screen and (max-width: 768px){
+    nav ul{
+        flex-direction: column;
+    }
+
+    nav ul li:hover ul{
+        width: 100%;
+        position: relative;
+        margin-top: -30px;
+    }
+
+    .container{
+        grid-template-columns: 1fr;
+        padding-bottom: 30px;
+    }
+
+    .container article{
+        margin-top: 30px;
+    }
+
+}
